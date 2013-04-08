@@ -1,0 +1,290 @@
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-04-07 10:54:53
+project --topLevelPackage com.jobmatcher
+mongo setup
+enum type --class ~.reference.States
+enum constant --name Alabama
+enum constant --name Alaska
+enum constant --name Arizona
+enum constant --name Arkansas
+enum constant --name California
+enum constant --name Colorado
+enum constant --name Connecticut
+enum constant --name Delaware
+enum constant --name Florida
+enum constant --name Georgia
+enum constant --name Hawaii
+enum constant --name Idaho
+enum constant --name Illinois
+enum constant --name Indiana
+enum constant --name Iowa
+enum constant --name Kansas
+enum constant --name Kentucky
+enum constant --name Louisiana
+enum constant --name Maine
+enum constant --name Maryland
+enum constant --name Massachusetts
+enum constant --name Michigan
+enum constant --name Minnesota
+enum constant --name Mississippi
+enum constant --name Missouri
+enum constant --name Montana
+enum constant --name Nebraska
+enum constant --name Nevada
+enum constant --name New_Hampshire
+enum constant --name New_Jersey
+enum constant --name New_Mexico
+enum constant --name New_York
+enum constant --name North_Carolina
+enum constant --name North_Dakota
+enum constant --name Ohio
+enum constant --name Oklahoma
+enum constant --name Oregon
+enum constant --name Pennsylvania
+enum constant --name Rhode_Island
+enum constant --name South_Carolina
+enum constant --name South_Dakota
+enum constant --name Tennessee
+enum constant --name Texas
+enum constant --name Utah
+enum constant --name Vermont
+enum constant --name Virginia
+enum constant --name Washington
+enum constant --name West_Virginia
+enum constant --name Wisconsin
+enum constant --name Wyoming
+enum type --class ~.reference.JobType
+enum constant --name Full_Time
+enum constant --name Part_Time
+enum constant --name Internship
+enum constant --name Contract_Based
+enum type --class ~.reference.ExperienceLevel
+enum constant --name Any_Level
+enum constant --name Executive
+enum constant --name Director
+enum constant --name Mid_Senior_Level
+enum constant --name Entry_Level
+enum type --class ~.reference.Industry
+enum constant --name Accounting
+enum constant --name Airlines_or_Aviation
+enum constant --name Animation
+enum constant --name Apparel_and_Fashion
+enum constant --name Architecture_and_Planning
+enum constant --name Arts_and_Crafts
+enum constant --name Automotive
+enum constant --name Aviation_and_Aerospace
+enum constant --name Banking
+enum constant --name Biotechnology
+enum constant --name Broadcast_Media
+enum constant --name Building_Materials
+enum constant --name Business_Supplies_and_Equipment
+enum constant --name Capital_Markets
+enum constant --name Chemicals
+enum constant --name Civic_and_Social_Organization
+enum constant --name Civil_Engineering
+enum constant --name Commercial_Real_Estate
+enum constant --name Computer_and_Network_Security
+enum constant --name Computer_Games
+enum constant --name Computer_Hardware
+enum constant --name Computer_Networking
+enum constant --name Computer_Software
+enum constant --name Construction
+enum constant --name Consumer_Electronics
+enum constant --name Consumer_Goods
+enum constant --name Consumer_Services
+enum constant --name Cosmetics
+enum constant --name Dairy
+enum constant --name Defense_and_Space
+enum constant --name Design
+enum constant --name Education_Management
+enum constant --name E_Learning
+enum constant --name Electrical_or_Electronic_Manufacturing
+enum constant --name Entertainment
+enum constant --name Environmental_Services
+enum constant --name Events_Services
+enum constant --name Executive_Office
+enum constant --name Facilities_Services
+enum constant --name Farming
+enum constant --name Financial_Services
+enum constant --name Fine_Art
+enum constant --name Fishery
+enum constant --name Food_and_Beverages
+enum constant --name Food_Production
+enum constant --name Fund_Raising
+enum constant --name Furniture
+enum constant --name Gambling_and_Casinos
+enum constant --name Glass_Ceramics_and_Concrete
+enum constant --name Government_Administration
+enum constant --name Government_Relations
+enum constant --name Graphic_Design
+enum constant --name Health_Wellness_and_Fitness
+enum constant --name Higher_Education
+enum constant --name Hospital_and_Health_Care
+enum constant --name Hospitality
+enum constant --name Human_Resources
+enum constant --name Import_and_Export
+enum constant --name Individual_and_Family_Services
+enum constant --name Industrial_Automation
+enum constant --name Information_Services
+enum constant --name Information_Technology_and_Services
+enum constant --name Insurance
+enum constant --name International_Affairs
+enum constant --name International_Trade_and_Development
+enum constant --name Internet
+enum constant --name Investment_Banking
+enum constant --name Investment_Management
+enum constant --name Judiciary
+enum constant --name Law_Enforcement
+enum constant --name Law_Practice
+enum constant --name Legal_Services
+enum constant --name Legislative_Office
+enum constant --name Leisure_Travel_and_Tourism
+enum constant --name Libraries
+enum constant --name Logistics_and_Supply_Chain
+enum constant --name Luxury_Goods_and_Jewelry
+enum constant --name Machinery
+enum constant --name Management_Consulting
+enum constant --name Maritime
+enum constant --name Marketing_and_Advertising
+enum constant --name Market_Research
+enum constant --name Mechanical_or_Industrial_Engineering
+enum constant --name Media_Production
+enum constant --name Medical_Devices
+enum constant --name Medical_Practice
+enum constant --name Mental_Health_Care
+enum constant --name Military
+enum constant --name Mining_and_Metals
+enum constant --name Motion_Pictures_and_Film
+enum constant --name Museums_and_Institutions
+enum constant --name Music
+enum constant --name Nanotechnology
+enum constant --name Newspapers
+enum constant --name Nonprofit_Organization_Management
+enum constant --name Oil_and_Energy
+enum constant --name Online_Media
+enum constant --name Outsourcing_or_Offshoring
+enum constant --name Package_or_Freight_Delivery
+enum constant --name Packaging_and_Containers
+enum constant --name Paper_and_Forest_Products
+enum constant --name Performing_Arts
+enum constant --name Pharmaceuticals
+enum constant --name Philanthropy
+enum constant --name Photography
+enum constant --name Plastics
+enum constant --name Political_Organization
+enum constant --name Primary_or_Secondary_Education
+enum constant --name Printing
+enum constant --name Professional_Training_and_Coaching
+enum constant --name Program_Development
+enum constant --name Public_Policy
+enum constant --name Public_Relations_and_Communications
+enum constant --name Public_Safety
+enum constant --name Publishing
+enum constant --name Railroad_Manufacture
+enum constant --name Ranching
+enum constant --name Real_Estate
+enum constant --name Recreational_Facilities_and_Services
+enum constant --name Religious_Institutions
+enum constant --name Renewables_and_Environment
+enum constant --name Research
+enum constant --name Restaurants
+enum constant --name Retail
+enum constant --name Security_and_Investigations
+enum constant --name Semiconductors
+enum constant --name Shipbuilding
+enum constant --name Sporting_Goods
+enum constant --name Sports
+enum constant --name Staffing_and_Recruiting
+enum constant --name Supermarkets
+enum constant --name Telecommunications
+enum constant --name Textiles
+enum constant --name Think_Tanks
+enum constant --name Tobacco
+enum constant --name Translation_and_Localization
+enum constant --name Transportation_or_Trucking_or_Railroad
+enum constant --name Utilities
+enum constant --name Venture_Capital_and_Private_Equity
+enum constant --name Veterinary
+enum constant --name Warehousing
+enum constant --name Wholesale
+enum constant --name Wine_and_Spirits
+enum constant --name Wireless
+enum constant --name Writing_and_Editing
+entity mongo --class ~.domain.JobSeeker --testAutomatically
+entity mongo --class ~.domain.HiringManager --testAutomatically
+entity mongo --class ~.domain.Addresses --testAutomatically
+entity mongo --class ~.domain.JobApplicant --testAutomatically
+entity mongo --class ~.domain.Job --testAutomatically
+entity mongo --class ~.domain.CoverLetter --testAutomatically
+entity mongo --class ~.domain.Resume --testAutomatically
+entity mongo --class ~.domain.SavedJob --testAutomatically
+entity mongo --class ~.domain.SavedJobApplicant --testAutomatically
+field string --fieldName email --unique --notNull --regexp "[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+" --class ~.domain.JobSeeker
+field string --fieldName password --notNull --sizeMin 4 --sizeMax 45
+field string --fieldName address --notNull --sizeMin 4 --sizeMax 255
+field string --fieldName city --notNull --sizeMin 4 --sizeMax 45
+field enum --fieldName states --notNull --type ~.reference.States
+field string --fieldName zip --notNull --sizeMin 5 --sizeMax 5
+field string --fieldName email --unique --notNull --regexp "[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+" --class ~.domain.HiringManager
+field string --fieldName password --notNull --sizeMin 4 --sizeMax 45
+field string --fieldName companyName --notNull --sizeMin 1 --sizeMax 255
+field set --fieldName address --notNull --type ~.domain.Addresses
+field string --fieldName address --notNull --sizeMin 4 --sizeMax 255 --class ~.domain.Addresses
+field string --fieldName city --notNull --sizeMin 4 --sizeMax 45
+field enum --fieldName states --notNull --type ~.reference.States
+field string --fieldName zip --notNull --sizeMin 5 --sizeMax 5
+field string --fieldName jobTitle --notNull --sizeMin 2 --sizeMax 255 --class ~.domain.Job
+field enum --fieldName jobType --notNull --type ~.reference.JobType
+field enum --fieldName experienceLevel --type ~.reference.ExperienceLevel
+field enum --fieldName industry --type ~.reference.Industry
+field set --fieldName address --type ~.domain.Addresses
+field string --fieldName companyDescription --sizeMax 255
+field string --fieldName desiredSkills --sizeMax 255
+field string --fieldName jobDescription --notNull --sizeMin 2 --sizeMax 255
+field date --fieldName jobPostedDate --notNull --type java.util.Date
+field date --fieldName jobExpirationDate --notNull --type java.util.Date
+field reference --fieldName hiringManager --notNull --type ~.domain.HiringManager
+field reference --fieldName jobSeeker --notNull --type ~.domain.JobSeeker --class ~.domain.JobApplicant
+field reference --fieldName job --notNull --type ~.domain.Job
+field reference --fieldName resume --notNull --type ~.domain.Resume
+field reference --fieldName coverLetter --notNull --type ~.domain.CoverLetter
+field reference --fieldName jobSeeker --notNull --type ~.domain.JobSeeker --class ~.domain.SavedJob
+field reference --fieldName job --notNull --type ~.domain.Job
+field reference --fieldName hiringManager --notNull --type ~.domain.HiringManager --class ~.domain.SavedJobApplicant
+field reference --fieldName jobApplicant --notNull --type ~.domain.JobApplicant
+field reference --fieldName jobSeeker --notNull --type ~.domain.JobSeeker --class ~.domain.Resume
+field string --fieldName name --notNull --sizeMin 1 --sizeMax 255
+field file --fieldName file --contentType PDF
+field reference --fieldName jobSeeker --notNull --type ~.domain.JobSeeker --class ~.domain.CoverLetter
+field string --fieldName name --notNull --sizeMin 1 --sizeMax 255
+field file --fieldName file --contentType PDF
+repository mongo --interface ~.repository.JobSeekerRepository --entity ~.domain.JobSeeker
+repository mongo --interface ~.repository.HiringManagerRepository --entity ~.domain.HiringManager
+repository mongo --interface ~.repository.AddressRepository --entity ~.domain.Addresses
+repository mongo --interface ~.repository.JobApplicantRepository --entity ~.domain.JobApplicant
+repository mongo --interface ~.repository.JobRepository --entity ~.domain.Job
+repository mongo --interface ~.repository.CoverLetterRepository --entity ~.domain.CoverLetter
+repository mongo --interface ~.repository.ResumeRepository --entity ~.domain.Resume
+repository mongo --interface ~.repository.SavedJobRepository --entity ~.domain.SavedJob
+repository mongo --interface ~.repository.SavedJobApplicantRepository --entity ~.domain.SavedJobApplicant
+service --interface ~.service.JobSeekerService --entity ~.domain.JobSeeker
+service --interface ~.service.HiringManagerService --entity ~.domain.HiringManager
+service --interface ~.service.AddressService --entity ~.domain.Addresses
+service --interface ~.service.JobApplicantService --entity ~.domain.JobApplicant
+service --interface ~.service.JobService --entity ~.domain.Job
+service --interface ~.service.CoverLetterService --entity ~.domain.CoverLetter
+service --interface ~.service.ResumeService --entity ~.domain.Resume
+service --interface ~.service.SavedJobService --entity ~.domain.SavedJob
+service --interface ~.service.SavedJobApplicantService --entity ~.domain.SavedJobApplicant
+json all --deepSerialize
+web mvc json setup
+web mvc json all --package ~.web
+web mvc setup
+web mvc all --package ~.web
+logging setup --level INFO
+security setup
+perform package
+perform eclipse
+// script jobmatcher.roo
+perform tests
+exit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-04-07 11:00:31

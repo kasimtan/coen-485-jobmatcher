@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_jobmatcher_domain_Addresses" items="${addresseses}" z="5BmZ+Lo4GqqQvkpW4YxcvEyGBGs=">
+        <table:table data="${addresseses}" id="l_com_jobmatcher_domain_Addresses" path="/addresseses" z="1ynb05+Zd9BiSm9IzfSWyJwPDXk=">
+            <table:column id="c_com_jobmatcher_domain_Addresses_address" property="address" z="JA9prler9HrP84zvsS73E+7XD4M="/>
+            <table:column id="c_com_jobmatcher_domain_Addresses_city" property="city" z="eY495DN3VHPhiDj/QjenX37I1Mk="/>
+            <table:column id="c_com_jobmatcher_domain_Addresses_states" property="states" z="l16Rv+9D8cO/Ft+3Qk701Rl+HQA="/>
+            <table:column id="c_com_jobmatcher_domain_Addresses_zip" property="zip" z="lQZ448qu1ibbghhKBTQy9Gof17U="/>
+        </table:table>
+    </page:list>
+</div>

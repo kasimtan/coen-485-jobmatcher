@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_jobmatcher_domain_JobApplicant" items="${jobapplicants}" z="nK5zXs7iM0DEA+oM6Nxw99dH/u8=">
+        <table:table data="${jobapplicants}" id="l_com_jobmatcher_domain_JobApplicant" path="/jobapplicants" z="LROror+nNIb1mmkKrgk+a3Y/2Q4=">
+            <table:column id="c_com_jobmatcher_domain_JobApplicant_jobSeeker" property="jobSeeker" z="4rVC3bOR2qEeIyKMl6IMbG+kNj8="/>
+            <table:column id="c_com_jobmatcher_domain_JobApplicant_job" property="job" z="yw65v/d8thftlWupUp1slS6Efm4="/>
+            <table:column id="c_com_jobmatcher_domain_JobApplicant_resume" property="resume" z="K6N7VFAldXJ3Kc0XpHy9Nw7XuEg="/>
+            <table:column id="c_com_jobmatcher_domain_JobApplicant_coverLetter" property="coverLetter" z="6tTjqqyPJEp9hnmMBN8hMIHBK6I="/>
+        </table:table>
+    </page:list>
+</div>

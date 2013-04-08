@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_jobmatcher_domain_HiringManager" object="${hiringmanager}" path="/hiringmanagers" z="qrtQnUOkVRPgt2B8Huj5NEEDgmo=">
+        <field:display field="email" id="s_com_jobmatcher_domain_HiringManager_email" object="${hiringmanager}" z="Dpwz4yc7nWmXmzDGn5O0vqpDuRI="/>
+        <field:display field="password" id="s_com_jobmatcher_domain_HiringManager_password" object="${hiringmanager}" z="ZKza91UfDO0+PDw+KU2K2nc3kJk="/>
+        <field:display field="companyName" id="s_com_jobmatcher_domain_HiringManager_companyName" object="${hiringmanager}" z="1stBcWKVuX5lACBn4ZwqfSHXCnE="/>
+        <field:display field="address" id="s_com_jobmatcher_domain_HiringManager_address" object="${hiringmanager}" z="ZjDUh22r1Va/nwTS7IuR726rsYQ="/>
+    </page:show>
+</div>

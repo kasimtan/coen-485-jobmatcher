@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_jobmatcher_domain_HiringManager" modelAttribute="hiringManager" path="/hiringmanagers" versionField="none" z="HxSqWE2hxflTzMlVj39Esi2ZWh8=">
+        <field:input field="email" id="c_com_jobmatcher_domain_HiringManager_email" required="true" validationMessageCode="field_invalid_email" validationRegex="[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+" z="+CM9R0pHp/Ga/nl0djAquTcoROk="/>
+        <field:textarea field="password" id="c_com_jobmatcher_domain_HiringManager_password" required="true" z="Waxm+YvScBD+pWri9kt/QBvLYZU="/>
+        <field:textarea field="companyName" id="c_com_jobmatcher_domain_HiringManager_companyName" required="true" z="aEgod1FhL/N57P7D+UwLlcv3SKI="/>
+        <field:select field="address" id="c_com_jobmatcher_domain_HiringManager_address" itemValue="id" items="${addresseses}" multiple="true" path="/addresseses" required="true" z="YYv3fJZ8iFyNbU10Rd7MlpEJeP8="/>
+    </form:update>
+</div>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Job Matcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/common.css" rel="stylesheet"/>
+    <link href="lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">JobMatcher</a>
+          <div class="nav-collapse collapse">
+           
+            <form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email">
+              <input class="span2" type="password" placeholder="Password">
+              <button type="submit" class="btn">Sign in</button>
+            </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div id="wrap">
+
+    <div id="main" class="container-fluid clear-top">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit main-height">
+        <h1>Welcome to Job Matcher</h1>
+  	    <p class="pull-right">a place where every Job Seekers and Hiring Managers meets</p>
+  	    
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row-fluid">
+        <div class="span6">
+          <div class="hero-unit main-height" align="center">
+          	 <h2>Hiring Manager</h2>
+          <p>
+              <a href="#hiringManagerSignupDialog" role="button" class="btn btn-large btn-primary" data-toggle="modal"><strong>Sign Up</strong></a>
+          </p>
+
+          </div>
+         
+        </div>
+        <div class="span6">
+        	<div class="hero-unit main-height" align="center">
+        		   <h2>Job Seeker</h2>
+
+                <p>
+                    <a href="#jobSeekerSignupDialog" role="button" class="btn btn-large btn-primary" data-toggle="modal"><strong>Sign Up</strong></a>
+        	    </p>
+            </div>
+
+       
+       </div>
+      
+      </div>
+
+    </div>
+
+
+
+
+
+    </div> <!-- /container -->
+
+    <footer class="footer">
+        <div class="text-right" align="center"><strong>&copy; JobMatcher 2013</strong></div>
+    </footer>
+
+
+    <!-- Modal -->
+    <div id="hiringManagerSignupDialog" data-backdrop="static" data-keyboard="false" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="false">×</button>
+            <h3 id="myModalLabel">Sign Up [Hiring Manager]</h3>
+        </div>
+        <div class="modal-body">
+
+            <form class="form-horizontal" novalidate>
+                <div class="control-group">
+                    <label class="control-label" for="email">Email address*:</label>
+                    <div class="controls">
+                        <input type="email" name="email" id="email" required>
+
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="password">Password*:</label>
+                    <div class="controls">
+                        <input type="password" name="password" id="password" required>
+
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="confirm_password">Confirm Password*:</label>
+                    <div class="controls">
+                        <input type="password" name="confirm_password" id="confirm_password" required>
+
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="company_name">Company Name*:</label>
+                    <div class="controls">
+                        <input type="text" name="company_name" id="company_name" required>
+
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="address">Address:</label>
+                    <div class="controls">
+                        <input type="text" name="address" id="address" required>
+
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="company_name">City:</label>
+                    <div class="controls">
+                        <input type="text" name="city" id="city" required>
+
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="state">State:</label>
+                    <div class="controls">
+                        <select>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="zip">Zip:</label>
+                    <div class="controls">
+                        <input type="text" name="zip" id="zip">
+
+                    </div>
+                </div>
+
+
+            </form>
+
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary">Sign Up</button>
+        </div>
+    </div>
+
+
+
+
+    <div id="jobSeekerSignupDialog" data-backdrop="static" data-keyboard="false" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="false">×</button>
+            <h3 id="myModalLabel">Sign Up [Job Seeker]</h3>
+        </div>
+        <div class="modal-body">
+
+            <form class="form-horizontal" novalidate>
+                <div class="control-group">
+                    <label class="control-label" for="email">Email address*:</label>
+                    <div class="controls">
+                        <input type="email" name="email" id="email" required>
+
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="password">Password*:</label>
+                    <div class="controls">
+                        <input type="password" name="password" id="password" required>
+
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="password">Confirm Password*:</label>
+                    <div class="controls">
+                        <input type="password" name="confirm_password" id="confirm_password" required>
+
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="address">Address:</label>
+                    <div class="controls">
+                        <input type="text" name="address" id="address">
+
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="company_name">City:</label>
+                    <div class="controls">
+                        <input type="text" name="city" id="city">
+
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="state">State:</label>
+                    <div class="controls">
+                        <select>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="zip">Zip:</label>
+                    <div class="controls">
+                        <input type="text" name="zip" id="zip" required>
+
+                    </div>
+                </div>
+
+
+            </form>
+
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary">Sign Up</button>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="demo" data-backdrop="static" data-keyboard="false" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="false">×</button>
+            <h3 id="myModalLabel">Hiring Manager</h3>
+        </div>
+        <div class="modal-body">
+
+            <form class="form-horizontal" novalidate>
+                <div class="control-group">
+                    <label class="control-label" for="email">Email address:</label>
+                    <div class="controls">
+                        <input type="email" name="email" id="email" required>
+                        <p class="help-block">Email address we can contact you on</p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="emailAgain">Email again:</label>
+                    <div class="controls">
+                        <input type="email" data-validation-matches-match="email" data-validation-matches-message="Must match email address entered above" id="emailAgain" name="emailAgain">
+                        <p class="help-block">And again, to check for speeling miskates</p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="terms-and-conditions">Legal:</label>
+                    <div class="controls">
+                        <label class="checkbox">
+                            <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required data-validation-required-message="You must agree to the terms and conditions">
+                            I agree to the <a href="#">terms and conditions</a>
+                        </label>
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Quality Control</label>
+                    <div class="controls">
+                        <label class="checkbox">
+                            <input type="checkbox" name="qualityControl[]" value="fast" data-validation-minchecked-minchecked="2" data-validation-minchecked-message="Choose two" data-validation-maxchecked-maxchecked="2" data-validation-maxchecked-message="You can't have it all ways" >
+                            Fast
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="qualityControl[]" value="cheap">
+                            Cheap
+                        </label>                                                                                           tes
+                        <label class="checkbox">
+                            <input type="checkbox" name="qualityControl[]" value="good">
+                            Good
+                        </label>
+                        <p class="help-block"></p>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="lib/jquery/jquery-1.9.1.min.js"></script>
+    <script src="lib/jqbootstrapvalidation/jqBootstrapValidation.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
+    </script>
+
+  </body>
+</html>
