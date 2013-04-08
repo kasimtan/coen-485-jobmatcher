@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="jobapplicants/list">
+        <put-attribute name="body" value="/WEB-INF/views/jobapplicants/list.jspx"/>
+    </definition>
+<definition extends="default" name="jobapplicants/show">
+        <put-attribute name="body" value="/WEB-INF/views/jobapplicants/show.jspx"/>
+    </definition>
+<definition extends="default" name="jobapplicants/create">
+        <put-attribute name="body" value="/WEB-INF/views/jobapplicants/create.jspx"/>
+    </definition>
+<definition extends="default" name="jobapplicants/update">
+        <put-attribute name="body" value="/WEB-INF/views/jobapplicants/update.jspx"/>
+    </definition>
+</tiles-definitions>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_jobmatcher_domain_Job" modelAttribute="job" path="/jobs" render="${empty dependencies}" z="VqSSDuO3zqaWxw0JG7fvX/CqWdU=">
+        <field:textarea field="jobTitle" id="c_com_jobmatcher_domain_Job_jobTitle" required="true" z="SswoPuvBAmwk9yiyc9sLHYxZrK8="/>
+        <field:select field="jobType" id="c_com_jobmatcher_domain_Job_jobType" items="${jobtypes}" path="jobtypes" required="true" z="g3ST91fUDqBqK/E4+8J/mdqDUbQ="/>
+        <field:select field="experienceLevel" id="c_com_jobmatcher_domain_Job_experienceLevel" items="${experiencelevels}" path="experiencelevels" z="pizda/pQg7bLt8GGajTzdsnA6FQ="/>
+        <field:select field="industry" id="c_com_jobmatcher_domain_Job_industry" items="${industrys}" path="industrys" z="VRdBmzNfWlb6j3pOtB937pu8cbQ="/>
+        <field:select field="address" id="c_com_jobmatcher_domain_Job_address" itemValue="id" items="${addresseses}" multiple="true" path="/addresseses" z="zmK5WE8O/MKry+rhFNhcqyI9DTk="/>
+        <field:textarea field="companyDescription" id="c_com_jobmatcher_domain_Job_companyDescription" z="ZSV6IXg8ye6cKlFWSKt3JJSXuGY="/>
+        <field:textarea field="desiredSkills" id="c_com_jobmatcher_domain_Job_desiredSkills" z="50xirX5Z3Mi92cNbMelMtRIau3E="/>
+        <field:textarea field="jobDescription" id="c_com_jobmatcher_domain_Job_jobDescription" required="true" z="h7a/dHwLSY1BXosAEWYrIlys4+E="/>
+        <field:datetime dateTimePattern="${job_jobposteddate_date_format}" field="jobPostedDate" id="c_com_jobmatcher_domain_Job_jobPostedDate" required="true" z="XJUOh6I0Q9bke41C78aaZXatPPk="/>
+        <field:datetime dateTimePattern="${job_jobexpirationdate_date_format}" field="jobExpirationDate" id="c_com_jobmatcher_domain_Job_jobExpirationDate" required="true" z="4bYCRApN2na2ND856VI1IQAEv7o="/>
+        <field:select field="hiringManager" id="c_com_jobmatcher_domain_Job_hiringManager" itemValue="id" items="${hiringmanagers}" path="/hiringmanagers" required="true" z="ffj2fRU4T9G2LtEqkxS62rwWc1A="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_jobmatcher_domain_Job" render="${not empty dependencies}" z="36EwT1L9KkM02W1aAFQ2QSRprnQ="/>
+</div>

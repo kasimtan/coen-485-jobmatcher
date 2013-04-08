@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_jobmatcher_domain_Resume" items="${resumes}" z="DOJdJJeYKEnjjoiTrF/137flU9g=">
+        <table:table data="${resumes}" id="l_com_jobmatcher_domain_Resume" path="/resumes" z="W0edzT26LxDBNEpHEnjuHeMwnzU=">
+            <table:column id="c_com_jobmatcher_domain_Resume_jobSeeker" property="jobSeeker" z="yG02aE40RkWlgkyDJiKb7M0YV4g="/>
+            <table:column id="c_com_jobmatcher_domain_Resume_name" property="name" z="DQR8iSDgopqwt+ZXw7CT5aDfV9U="/>
+            <table:column id="c_com_jobmatcher_domain_Resume_file" property="file" z="xVxDnaZiTZzTva9l/y3dVAOGOLk="/>
+        </table:table>
+    </page:list>
+</div>

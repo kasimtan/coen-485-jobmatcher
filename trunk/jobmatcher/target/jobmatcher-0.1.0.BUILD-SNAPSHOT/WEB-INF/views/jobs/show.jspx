@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_jobmatcher_domain_Job" object="${job}" path="/jobs" z="AZwovw4G3546Y9P9bIDekjHKNhE=">
+        <field:display field="jobTitle" id="s_com_jobmatcher_domain_Job_jobTitle" object="${job}" z="gnvglHn59r7zN3oa2rOWUjexdMY="/>
+        <field:display field="jobType" id="s_com_jobmatcher_domain_Job_jobType" object="${job}" z="tZsRvky5LIeG3UdMl301rwOOvHg="/>
+        <field:display field="experienceLevel" id="s_com_jobmatcher_domain_Job_experienceLevel" object="${job}" z="XlggL1jDo9tUtQ0jNvWfJ32ENAo="/>
+        <field:display field="industry" id="s_com_jobmatcher_domain_Job_industry" object="${job}" z="0PF4esQkLliv1Npu2se0pHy5xzU="/>
+        <field:display field="address" id="s_com_jobmatcher_domain_Job_address" object="${job}" z="Sss5aQXEjBFQbgjnKs9e426eNZ8="/>
+        <field:display field="companyDescription" id="s_com_jobmatcher_domain_Job_companyDescription" object="${job}" z="K23uN6ve4Ya42U0/eHC2Io9f1rQ="/>
+        <field:display field="desiredSkills" id="s_com_jobmatcher_domain_Job_desiredSkills" object="${job}" z="eU5y8TbX7rEIQouKXw3LCemgGk0="/>
+        <field:display field="jobDescription" id="s_com_jobmatcher_domain_Job_jobDescription" object="${job}" z="vlHiQib5zF/JrJlSQwb/9FtQvvw="/>
+        <field:display date="true" dateTimePattern="${job_jobposteddate_date_format}" field="jobPostedDate" id="s_com_jobmatcher_domain_Job_jobPostedDate" object="${job}" z="qq1Dun27et2rz8uu33DIqkYh7To="/>
+        <field:display date="true" dateTimePattern="${job_jobexpirationdate_date_format}" field="jobExpirationDate" id="s_com_jobmatcher_domain_Job_jobExpirationDate" object="${job}" z="N+Dv/OdscIC9bO00ObtH4K6zeNg="/>
+        <field:display field="hiringManager" id="s_com_jobmatcher_domain_Job_hiringManager" object="${job}" z="bOlReL/GmaDqFZIBQv9jICOWolQ="/>
+    </page:show>
+</div>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_jobmatcher_domain_CoverLetter" object="${coverletter}" path="/coverletters" z="LTVVwmDvfBJsRo4GUVQhS+/bsVs=">
+        <field:display field="jobSeeker" id="s_com_jobmatcher_domain_CoverLetter_jobSeeker" object="${coverletter}" z="cvGRCPaNv49ZO3D6F+dF5FDrWVM="/>
+        <field:display field="name" id="s_com_jobmatcher_domain_CoverLetter_name" object="${coverletter}" z="f01Hy3h6Di6maWzIe52pHVgHHyI="/>
+        <field:display field="file" id="s_com_jobmatcher_domain_CoverLetter_file" object="${coverletter}" z="sh6SPR/xc14bFEBIuAlL65sOTz8="/>
+    </page:show>
+</div>

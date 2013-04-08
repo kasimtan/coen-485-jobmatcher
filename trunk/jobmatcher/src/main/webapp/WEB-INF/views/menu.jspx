@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_savedjob" z="36Fx2JqEtpv+vDwqBV487ViEx4g=">
+            <menu:item id="i_savedjob_new" messageCode="global_menu_new" url="/savedjobs?form" z="9a3ZKIV/aDhU3Z5tG0UyaVdnoDg="/>
+            <menu:item id="i_savedjob_list" messageCode="global_menu_list" url="/savedjobs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="FCKkrOSqya5oZvoCUAqG2lXK3dc="/>
+        </menu:category>
+        <menu:category id="c_job" z="Spq9e4Ex4B3IMcYI5WfoQsLFC30=">
+            <menu:item id="i_job_new" messageCode="global_menu_new" url="/jobs?form" z="LPLNOdNVR7SU3S6Mm86Cya2uODg="/>
+            <menu:item id="i_job_list" messageCode="global_menu_list" url="/jobs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="40TPkqDKrJpvrpVeIfIWHa+/lZU="/>
+        </menu:category>
+        <menu:category id="c_coverletter" z="R5Xh1cGJfstRESBygMfEuASUAq4=">
+            <menu:item id="i_coverletter_new" messageCode="global_menu_new" url="/coverletters?form" z="quRn95OPdQYmhoK+JjAcvgtxVs8="/>
+            <menu:item id="i_coverletter_list" messageCode="global_menu_list" url="/coverletters?page=1&amp;size=${empty param.size ? 10 : param.size}" z="E7q+bhp3K6JPM/M17CmjKQmFjN0="/>
+        </menu:category>
+        <menu:category id="c_resume" z="m2x4NeINMPS/5gfeW08KfhoZW2I=">
+            <menu:item id="i_resume_new" messageCode="global_menu_new" url="/resumes?form" z="Bu2/ybXfOYqJyNwJkXgWoyqzOQ0="/>
+            <menu:item id="i_resume_list" messageCode="global_menu_list" url="/resumes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="R/Q477KOyulp49PrJrli+/0avJI="/>
+        </menu:category>
+        <menu:category id="c_hiringmanager" z="XkzInoAtakGvZ9YUeNzmndkdARc=">
+            <menu:item id="i_hiringmanager_new" messageCode="global_menu_new" url="/hiringmanagers?form" z="viZYlmgsZ5qpx/eOwywnZv4PyKo="/>
+            <menu:item id="i_hiringmanager_list" messageCode="global_menu_list" url="/hiringmanagers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="b2TQ+u5JpZI4SzTIm+lupEGRfAM="/>
+        </menu:category>
+        <menu:category id="c_jobapplicant" z="0EV5zIZcQFIzVug4ac9d64/hN1o=">
+            <menu:item id="i_jobapplicant_new" messageCode="global_menu_new" url="/jobapplicants?form" z="TMoFsVYGuaNjsOWyTNWRLPFZRFs="/>
+            <menu:item id="i_jobapplicant_list" messageCode="global_menu_list" url="/jobapplicants?page=1&amp;size=${empty param.size ? 10 : param.size}" z="24Gtvtg9OE8jXctE//jUY/E7rGY="/>
+        </menu:category>
+        <menu:category id="c_savedjobapplicant" z="4lOf1/BDbf0LNDOngDtPd3h/D5E=">
+            <menu:item id="i_savedjobapplicant_new" messageCode="global_menu_new" url="/savedjobapplicants?form" z="gkkTW2J73ygJM52gITcRrGE4OPo="/>
+            <menu:item id="i_savedjobapplicant_list" messageCode="global_menu_list" url="/savedjobapplicants?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Xbu5VAzDGbhZaLCn3YTXoX+rxyg="/>
+        </menu:category>
+        <menu:category id="c_jobseeker" z="S7cEFvbLQNQ7H0TxwhbnR3ecQ+o=">
+            <menu:item id="i_jobseeker_new" messageCode="global_menu_new" url="/jobseekers?form" z="21RrGZ/seVh3xQj4TBrJvlQfMrE="/>
+            <menu:item id="i_jobseeker_list" messageCode="global_menu_list" url="/jobseekers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="9q7e2qEltl2qT6YXksu+4r2h17U="/>
+        </menu:category>
+        <menu:category id="c_addresses" z="FElDAJnmeL04vflVECBBO/Qkz/E=">
+            <menu:item id="i_addresses_new" messageCode="global_menu_new" url="/addresseses?form" z="GYuS7+YoEVg6SjC+j17pp5sxKWU="/>
+            <menu:item id="i_addresses_list" messageCode="global_menu_list" url="/addresseses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fhYaec2kWlT3pWQJdot76IEZYvw="/>
+        </menu:category>
+    </menu:menu>
+</div>

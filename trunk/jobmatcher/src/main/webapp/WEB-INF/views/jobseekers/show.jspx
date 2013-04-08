@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_jobmatcher_domain_JobSeeker" object="${jobseeker}" path="/jobseekers" z="HOUgoCql4SBhyn15GhK2+U27VKw=">
+        <field:display field="email" id="s_com_jobmatcher_domain_JobSeeker_email" object="${jobseeker}" z="N6TfWGt6FOv0HZbZzt38FLRS3oM="/>
+        <field:display field="password" id="s_com_jobmatcher_domain_JobSeeker_password" object="${jobseeker}" z="qmsZUF3hW8LLAY+4IBl9jggy1Z8="/>
+        <field:display field="address" id="s_com_jobmatcher_domain_JobSeeker_address" object="${jobseeker}" z="2V1giabJ3K84wuepBcr/rIbNNBY="/>
+        <field:display field="city" id="s_com_jobmatcher_domain_JobSeeker_city" object="${jobseeker}" z="z5j6i5klWlW1Gw/3vRe1AhYPKyg="/>
+        <field:display field="states" id="s_com_jobmatcher_domain_JobSeeker_states" object="${jobseeker}" z="YzElvwu8rLKfsFad8uCY2wxp93E="/>
+        <field:display field="zip" id="s_com_jobmatcher_domain_JobSeeker_zip" object="${jobseeker}" z="mc6ZfPDd3BnakgrSu9nhn8y9h3c="/>
+    </page:show>
+</div>

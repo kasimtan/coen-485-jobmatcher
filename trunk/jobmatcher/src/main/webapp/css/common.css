@@ -1,0 +1,39 @@
+/* styles for layout */
+html,body
+{
+    height:95%;
+}
+
+#wrap
+{
+    min-height: 100%;
+}
+
+#main
+{
+    overflow:auto;
+
+    margin-top:50px; /* this needs to be bigger than the header height */
+}
+
+.footer
+{
+    position: relative;
+    clear:both;
+    color: #FFFFFF;
+    margin-top: -20px;
+    padding-bottom: 10px;
+    padding-right: 14px;
+    padding-top: 10px;
+    position: relative;
+    background: black;
+
+}
+
+.main-height{
+    min-height: 140px;
+}
+
+.control-label {
+    font-weight: bold;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_jobmatcher_domain_Job" items="${jobs}" z="CowrfAcSdEIXTifIJei50QYFGDg=">
+        <table:table data="${jobs}" id="l_com_jobmatcher_domain_Job" path="/jobs" z="BG35gW2zRFAnslNOwCdCJh9Anbk=">
+            <table:column id="c_com_jobmatcher_domain_Job_jobTitle" property="jobTitle" z="LYsXF1cHd0prZRfAlK5R7k+EQr0="/>
+            <table:column id="c_com_jobmatcher_domain_Job_jobType" property="jobType" z="LNw3tvVgLkTZDEjE0JWHp4suWv8="/>
+            <table:column id="c_com_jobmatcher_domain_Job_experienceLevel" property="experienceLevel" z="a61NYiRF9+JRkbWFJzM1drV2aZc="/>
+            <table:column id="c_com_jobmatcher_domain_Job_industry" property="industry" z="bU/Hw2Vov8P8RHMmKhEWtYNQPHA="/>
+            <table:column id="c_com_jobmatcher_domain_Job_address" property="address" z="t2kNb6p8px5T09uVYzzqzRN7xYw="/>
+            <table:column id="c_com_jobmatcher_domain_Job_companyDescription" property="companyDescription" z="JYfEX60TXUX/7sJFb6JT957x9ok="/>
+        </table:table>
+    </page:list>
+</div>

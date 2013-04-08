@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_jobmatcher_domain_JobSeeker" items="${jobseekers}" z="zuZOQDiScG5pO063gmQLV4P/bTE=">
+        <table:table data="${jobseekers}" id="l_com_jobmatcher_domain_JobSeeker" path="/jobseekers" z="lFL6YqOJY0mJy3bAYUTA2VUNTnU=">
+            <table:column id="c_com_jobmatcher_domain_JobSeeker_email" property="email" z="gJUEHXREkn2fWLSzsZ5CnO6ALlg="/>
+            <table:column id="c_com_jobmatcher_domain_JobSeeker_password" property="password" z="xn7LNVF/swzIEjMlvHBPk6wcLQY="/>
+            <table:column id="c_com_jobmatcher_domain_JobSeeker_address" property="address" z="d04vg6c0hnW7MnNOAWJ1Cs4lKXs="/>
+            <table:column id="c_com_jobmatcher_domain_JobSeeker_city" property="city" z="WVgDKHALIJDuo5nvKlkx1LvfI34="/>
+            <table:column id="c_com_jobmatcher_domain_JobSeeker_states" property="states" z="bGCPh6dmm5JN58T2SBnyNIwXyXc="/>
+            <table:column id="c_com_jobmatcher_domain_JobSeeker_zip" property="zip" z="L8Vy9IYrKxl0uvKlMHIxN6aOdXQ="/>
+        </table:table>
+    </page:list>
+</div>
