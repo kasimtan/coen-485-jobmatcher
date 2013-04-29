@@ -4,9 +4,9 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_jobmatcher_domain_JobSeeker" modelAttribute="jobSeeker" path="/jobseekers" render="${empty dependencies}" z="Bl36V6rO3ReJqyP2HXpj3ZecS+E=">
         <field:input field="email" id="c_com_jobmatcher_domain_JobSeeker_email" required="true" validationMessageCode="field_invalid_email" validationRegex="[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+" z="XEoevOzjCEwGL3e/zGODBK4er70="/>
-        <field:textarea field="password" id="c_com_jobmatcher_domain_JobSeeker_password" required="true" z="XrgGlPmlxoIUu9ax9XOjYuFjw10="/>
-        <field:textarea field="address" id="c_com_jobmatcher_domain_JobSeeker_address" required="true" z="zwdPVgd8G7BPacW9oefdjDfYqnc="/>
-        <field:textarea field="city" id="c_com_jobmatcher_domain_JobSeeker_city" required="true" z="WaU7tgPofdjuhwbIG/o8HjKxRu0="/>
+        <field:input field="password" type="password" id="c_com_jobmatcher_domain_JobSeeker_password" required="true" z="XrgGlPmlxoIUu9ax9XOjYuFjw10="/>
+        <field:input field="address" id="c_com_jobmatcher_domain_JobSeeker_address" required="true" z="zwdPVgd8G7BPacW9oefdjDfYqnc="/>
+        <field:input field="city" id="c_com_jobmatcher_domain_JobSeeker_city" required="true" z="WaU7tgPofdjuhwbIG/o8HjKxRu0="/>
         <field:select field="states" id="c_com_jobmatcher_domain_JobSeeker_states" items="${stateses}" path="stateses" required="true" z="yRRDKiyPX1IpkmOTcmnvPVnqBnk="/>
         <field:input field="zip" id="c_com_jobmatcher_domain_JobSeeker_zip" max="5" min="5" required="true" z="sFBv1MmRYdmxP46tgOT8NOsxqmA="/>
     </form:create>
