@@ -11,9 +11,6 @@
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
     <link href="css/common.css" rel="stylesheet"/>
     <link href="lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-
-
-
   </head>
 
   <body>
@@ -28,8 +25,7 @@
           </button>
           <a class="brand" href="#">JobMatcher</a>
           <div class="nav-collapse collapse">
-           
-            <form class="navbar-form pull-right">
+            <form class="navbar-form pull-right" action="jobmatcher/resources/j_spring_security_check" method="post">
               <input class="span2" type="text" placeholder="Email">
               <input class="span2" type="password" placeholder="Password">
               <button type="submit" class="btn">Sign in</button>
@@ -47,7 +43,6 @@
       <div class="hero-unit main-height">
         <h1>Welcome to Job Matcher</h1>
   	    <p class="pull-right">a place where every Job Seekers and Hiring Managers meets</p>
-  	    
       </div>
 
       <!-- Example row of columns -->
@@ -55,32 +50,21 @@
         <div class="span6">
           <div class="hero-unit main-height" align="center">
           	 <h2>Hiring Manager</h2>
-          <p>
-              <a href="#hiringManagerSignupDialog" role="button" class="btn btn-large btn-primary" data-toggle="modal"><strong>Sign Up</strong></a>
-          </p>
-
+	         <p>
+	            <a href="#hiringManagerSignupDialog" role="button" class="btn btn-large btn-primary" data-toggle="modal"><strong>Sign Up</strong></a>
+	         </p>
           </div>
-         
         </div>
         <div class="span6">
-        	<div class="hero-unit main-height" align="center">
-        		   <h2>Job Seeker</h2>
-
-                <p>
-                    <a href="#jobSeekerSignupDialog" role="button" class="btn btn-large btn-primary" data-toggle="modal"><strong>Sign Up</strong></a>
-        	    </p>
-            </div>
-
-       
+          <div class="hero-unit main-height" align="center">
+        	 <h2>Job Seeker</h2>
+             <p>
+                <a href="#jobSeekerSignupDialog" role="button" class="btn btn-large btn-primary" data-toggle="modal"><strong>Sign Up</strong></a>
+       	     </p>
+          </div>       
        </div>
-      
       </div>
-
     </div>
-
-
-
-
 
     </div> <!-- /container -->
 
@@ -88,30 +72,26 @@
         <div class="text-right" align="center"><strong>&copy; JobMatcher 2013</strong></div>
     </footer>
 
-
     <!-- Modal -->
     <div id="hiringManagerSignupDialog" data-backdrop="static" data-keyboard="false" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="false">×</button>
             <h3 id="myModalLabel">Sign Up [Hiring Manager]</h3>
         </div>
+        <form class="form-horizontal" action="/jobmatcher/hiringmanagers" method="POST" enctype="application/x-www-form-urlencoded" novalidate>
         <div class="modal-body">
 
-            <form class="form-horizontal" novalidate>
                 <div class="control-group">
                     <label class="control-label" for="email">Email address*:</label>
                     <div class="controls">
                         <input type="email" name="email" id="email" required>
-
                     </div>
                 </div>
-
 
                 <div class="control-group">
                     <label class="control-label" for="password">Password*:</label>
                     <div class="controls">
                         <input type="password" name="password" id="password" required>
-
                     </div>
                 </div>
 
@@ -119,144 +99,13 @@
                     <label class="control-label" for="confirm_password">Confirm Password*:</label>
                     <div class="controls">
                         <input type="password" name="confirm_password" id="confirm_password" required>
-
                     </div>
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label" for="company_name">Company Name*:</label>
+                    <label class="control-label" for="companyName">Company Name*:</label>
                     <div class="controls">
-                        <input type="text" name="company_name" id="company_name" required>
-
-                    </div>
-                </div>
-
-                <div class="control-group">
-                    <label class="control-label" for="address">Address:</label>
-                    <div class="controls">
-                        <input type="text" name="address" id="address" required>
-
-                    </div>
-                </div>
-
-                <div class="control-group">
-                    <label class="control-label" for="company_name">City:</label>
-                    <div class="controls">
-                        <input type="text" name="city" id="city" required>
-
-                    </div>
-                </div>
-
-
-                <div class="control-group">
-                    <label class="control-label" for="state">State:</label>
-                    <div class="controls">
-                        <select>
-                            <option value="AL">Alabama</option>
-                            <option value="AK">Alaska</option>
-                            <option value="AZ">Arizona</option>
-                            <option value="AR">Arkansas</option>
-                            <option value="CA">California</option>
-                            <option value="CO">Colorado</option>
-                            <option value="CT">Connecticut</option>
-                            <option value="DE">Delaware</option>
-                            <option value="DC">District Of Columbia</option>
-                            <option value="FL">Florida</option>
-                            <option value="GA">Georgia</option>
-                            <option value="HI">Hawaii</option>
-                            <option value="ID">Idaho</option>
-                            <option value="IL">Illinois</option>
-                            <option value="IN">Indiana</option>
-                            <option value="IA">Iowa</option>
-                            <option value="KS">Kansas</option>
-                            <option value="KY">Kentucky</option>
-                            <option value="LA">Louisiana</option>
-                            <option value="ME">Maine</option>
-                            <option value="MD">Maryland</option>
-                            <option value="MA">Massachusetts</option>
-                            <option value="MI">Michigan</option>
-                            <option value="MN">Minnesota</option>
-                            <option value="MS">Mississippi</option>
-                            <option value="MO">Missouri</option>
-                            <option value="MT">Montana</option>
-                            <option value="NE">Nebraska</option>
-                            <option value="NV">Nevada</option>
-                            <option value="NH">New Hampshire</option>
-                            <option value="NJ">New Jersey</option>
-                            <option value="NM">New Mexico</option>
-                            <option value="NY">New York</option>
-                            <option value="NC">North Carolina</option>
-                            <option value="ND">North Dakota</option>
-                            <option value="OH">Ohio</option>
-                            <option value="OK">Oklahoma</option>
-                            <option value="OR">Oregon</option>
-                            <option value="PA">Pennsylvania</option>
-                            <option value="RI">Rhode Island</option>
-                            <option value="SC">South Carolina</option>
-                            <option value="SD">South Dakota</option>
-                            <option value="TN">Tennessee</option>
-                            <option value="TX">Texas</option>
-                            <option value="UT">Utah</option>
-                            <option value="VT">Vermont</option>
-                            <option value="VA">Virginia</option>
-                            <option value="WA">Washington</option>
-                            <option value="WV">West Virginia</option>
-                            <option value="WI">Wisconsin</option>
-                            <option value="WY">Wyoming</option>
-                        </select>
-
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label" for="zip">Zip:</label>
-                    <div class="controls">
-                        <input type="text" name="zip" id="zip">
-
-                    </div>
-                </div>
-
-
-            </form>
-
-
-        </div>
-        <div class="modal-footer">
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            <button class="btn btn-primary">Sign Up</button>
-        </div>
-    </div>
-
-
-
-
-    <div id="jobSeekerSignupDialog" data-backdrop="static" data-keyboard="false" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="false">×</button>
-            <h3 id="myModalLabel">Sign Up [Job Seeker]</h3>
-        </div>
-        <div class="modal-body">
-
-            <form class="form-horizontal" novalidate>
-                <div class="control-group">
-                    <label class="control-label" for="email">Email address*:</label>
-                    <div class="controls">
-                        <input type="email" name="email" id="email" required>
-
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label" for="password">Password*:</label>
-                    <div class="controls">
-                        <input type="password" name="password" id="password" required>
-
-                    </div>
-                </div>
-
-                <div class="control-group">
-                    <label class="control-label" for="password">Confirm Password*:</label>
-                    <div class="controls">
-                        <input type="password" name="confirm_password" id="confirm_password" required>
-
+                        <input type="text" name="companyName" id="companyName" required>
                     </div>
                 </div>
 
@@ -264,15 +113,128 @@
                     <label class="control-label" for="address">Address:</label>
                     <div class="controls">
                         <input type="text" name="address" id="address">
-
                     </div>
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label" for="company_name">City:</label>
+                    <label class="control-label" for="city">City:</label>
                     <div class="controls">
                         <input type="text" name="city" id="city">
+                    </div>
+                </div>
 
+                <div class="control-group">
+                    <label class="control-label" for="state">State:</label>
+                    <div class="controls">
+                        <select name="states">
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New_Hampshire">New Hampshire</option>
+                            <option value="New_Jersey">New Jersey</option>
+                            <option value="New_Mexico">New Mexico</option>
+                            <option value="New_York">New York</option>
+                            <option value="North_Carolina">North Carolina</option>
+                            <option value="North_Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode_Island">Rhode Island</option>
+                            <option value="South_Carolina">South Carolina</option>
+                            <option value="South_Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West_Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label" for="zip">Zip:</label>
+                    <div class="controls">
+                        <input type="text" name="zip" id="zip">
+                    </div>
+                </div>
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </div>
+        </form>
+    </div>
+
+    <div id="jobSeekerSignupDialog" data-backdrop="static" data-keyboard="false" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="false">×</button>
+            <h3 id="myModalLabel">Sign Up [Job Seeker]</h3>
+        </div>
+        <form class="form-horizontal" action="/jobmatcher/jobseekers" method="POST" enctype="application/x-www-form-urlencoded" novalidate>
+        <div class="modal-body">
+
+                <div class="control-group">
+                    <label class="control-label" for="email">Email address*:</label>
+                    <div class="controls">
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="password">Password*:</label>
+                    <div class="controls">
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="password">Confirm Password*:</label>
+                    <div class="controls">
+                        <input type="password" name="confirm_password" id="confirm_password" required>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="address">Address:</label>
+                    <div class="controls">
+                        <input type="text" name="address" id="address">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="city">City:</label>
+                    <div class="controls">
+                        <input type="text" name="city" id="city">
                     </div>
                 </div>
 
@@ -280,81 +242,75 @@
                 <div class="control-group">
                     <label class="control-label" for="state">State:</label>
                     <div class="controls">
-                        <select>
-                            <option value="AL">Alabama</option>
-                            <option value="AK">Alaska</option>
-                            <option value="AZ">Arizona</option>
-                            <option value="AR">Arkansas</option>
-                            <option value="CA">California</option>
-                            <option value="CO">Colorado</option>
-                            <option value="CT">Connecticut</option>
-                            <option value="DE">Delaware</option>
-                            <option value="DC">District Of Columbia</option>
-                            <option value="FL">Florida</option>
-                            <option value="GA">Georgia</option>
-                            <option value="HI">Hawaii</option>
-                            <option value="ID">Idaho</option>
-                            <option value="IL">Illinois</option>
-                            <option value="IN">Indiana</option>
-                            <option value="IA">Iowa</option>
-                            <option value="KS">Kansas</option>
-                            <option value="KY">Kentucky</option>
-                            <option value="LA">Louisiana</option>
-                            <option value="ME">Maine</option>
-                            <option value="MD">Maryland</option>
-                            <option value="MA">Massachusetts</option>
-                            <option value="MI">Michigan</option>
-                            <option value="MN">Minnesota</option>
-                            <option value="MS">Mississippi</option>
-                            <option value="MO">Missouri</option>
-                            <option value="MT">Montana</option>
-                            <option value="NE">Nebraska</option>
-                            <option value="NV">Nevada</option>
-                            <option value="NH">New Hampshire</option>
-                            <option value="NJ">New Jersey</option>
-                            <option value="NM">New Mexico</option>
-                            <option value="NY">New York</option>
-                            <option value="NC">North Carolina</option>
-                            <option value="ND">North Dakota</option>
-                            <option value="OH">Ohio</option>
-                            <option value="OK">Oklahoma</option>
-                            <option value="OR">Oregon</option>
-                            <option value="PA">Pennsylvania</option>
-                            <option value="RI">Rhode Island</option>
-                            <option value="SC">South Carolina</option>
-                            <option value="SD">South Dakota</option>
-                            <option value="TN">Tennessee</option>
-                            <option value="TX">Texas</option>
-                            <option value="UT">Utah</option>
-                            <option value="VT">Vermont</option>
-                            <option value="VA">Virginia</option>
-                            <option value="WA">Washington</option>
-                            <option value="WV">West Virginia</option>
-                            <option value="WI">Wisconsin</option>
-                            <option value="WY">Wyoming</option>
+                        <select name="states">
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New_Hampshire">New Hampshire</option>
+                            <option value="New_Jersey">New Jersey</option>
+                            <option value="New_Mexico">New Mexico</option>
+                            <option value="New_York">New York</option>
+                            <option value="North_Carolina">North Carolina</option>
+                            <option value="North_Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode_Island">Rhode Island</option>
+                            <option value="South_Carolina">South Carolina</option>
+                            <option value="South_Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West_Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
                         </select>
-
                     </div>
                 </div>
+                
                 <div class="control-group">
                     <label class="control-label" for="zip">Zip:</label>
                     <div class="controls">
-                        <input type="text" name="zip" id="zip" required>
-
+                        <input type="text" name="zip" id="zip">
                     </div>
                 </div>
-
-
-            </form>
-
-
+                
         </div>
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            <button class="btn btn-primary">Sign Up</button>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
         </div>
+        </form>
     </div>
-
 
     <!-- Modal -->
     <div id="demo" data-backdrop="static" data-keyboard="false" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
@@ -399,7 +355,7 @@
                         <label class="checkbox">
                             <input type="checkbox" name="qualityControl[]" value="cheap">
                             Cheap
-                        </label>                                                                                           tes
+                        </label>
                         <label class="checkbox">
                             <input type="checkbox" name="qualityControl[]" value="good">
                             Good
@@ -407,21 +363,14 @@
                         <p class="help-block"></p>
                     </div>
                 </div>
-
             </form>
-
-
+            
         </div>
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
             <button class="btn btn-primary">Save changes</button>
         </div>
     </div>
-
-
-
-
-
 
     <!-- Le javascript
     ================================================== -->
