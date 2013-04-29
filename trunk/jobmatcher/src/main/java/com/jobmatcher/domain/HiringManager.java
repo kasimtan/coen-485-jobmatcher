@@ -1,19 +1,19 @@
 package com.jobmatcher.domain;
 
-import flexjson.JSONDeserializer;
-import flexjson.JSONSerializer;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.data.annotation.Id;
@@ -22,6 +22,10 @@ import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.layers.repository.mongo.RooMongoEntity;
 import org.springframework.roo.addon.tostring.RooToString;
+import org.springframework.util.DigestUtils;
+
+import flexjson.JSONDeserializer;
+import flexjson.JSONSerializer;
 
 @Persistent
 @RooJavaBean
@@ -71,7 +75,7 @@ public class HiringManager {
     }
 
 	public void setPassword(String password) {
-        this.password = password;
+        this.password = encryptPassword(password);
     }
 
 	public String getCompanyName() {
@@ -108,5 +112,13 @@ public class HiringManager {
 
 	public static Collection<HiringManager> fromJsonArrayToHiringManagers(String json) {
         return new JSONDeserializer<List<HiringManager>>().use(null, ArrayList.class).use("values", HiringManager.class).deserialize(json);
+    }
+
+    protected String encryptPassword(String password) {
+        if (password != null && (! password.matches("^[0-9a-fA-F]+$"))) {
+            // prevent encryption if already encrypted
+            password = DigestUtils.md5DigestAsHex(password.getBytes());
+        }
+        return password;
     }
 }

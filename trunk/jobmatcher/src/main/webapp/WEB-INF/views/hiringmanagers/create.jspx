@@ -4,8 +4,8 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_jobmatcher_domain_HiringManager" modelAttribute="hiringManager" path="/hiringmanagers" render="${empty dependencies}" z="1amSqfcgx/ZAkCEJR8rRVtvE944=">
         <field:input field="email" id="c_com_jobmatcher_domain_HiringManager_email" required="true" validationMessageCode="field_invalid_email" validationRegex="[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+" z="+CM9R0pHp/Ga/nl0djAquTcoROk="/>
-        <field:textarea field="password" id="c_com_jobmatcher_domain_HiringManager_password" required="true" z="Waxm+YvScBD+pWri9kt/QBvLYZU="/>
-        <field:textarea field="companyName" id="c_com_jobmatcher_domain_HiringManager_companyName" required="true" z="aEgod1FhL/N57P7D+UwLlcv3SKI="/>
+        <field:input field="password" type="password" id="c_com_jobmatcher_domain_HiringManager_password" required="true" z="Waxm+YvScBD+pWri9kt/QBvLYZU="/>
+        <field:input field="companyName" id="c_com_jobmatcher_domain_HiringManager_companyName" required="true" z="aEgod1FhL/N57P7D+UwLlcv3SKI="/>
         <field:select field="address" id="c_com_jobmatcher_domain_HiringManager_address" itemValue="id" items="${addresseses}" multiple="true" path="/addresseses" required="true" z="YYv3fJZ8iFyNbU10Rd7MlpEJeP8="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_jobmatcher_domain_HiringManager" render="${not empty dependencies}" z="jVGAF7zfChrNdgpmFGCzKz0iLHE="/>
