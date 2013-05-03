@@ -37,3 +37,8 @@ html,body
 .control-label {
     font-weight: bold;
 }
+
+body .modal-body {
+    max-height: 450px;
+
+}
