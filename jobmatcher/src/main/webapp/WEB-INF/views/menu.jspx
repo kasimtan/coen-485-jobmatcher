@@ -39,5 +39,8 @@
             <menu:item id="i_addresses_new" messageCode="global_menu_new" url="/addresseses?form" z="GYuS7+YoEVg6SjC+j17pp5sxKWU="/>
             <menu:item id="i_addresses_list" messageCode="global_menu_list" url="/addresseses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fhYaec2kWlT3pWQJdot76IEZYvw="/>
         </menu:category>
+        <menu:category id="c_view" z="HjmI4Chx/kBYfS/6HjBLbCA+XpU=">
+            <menu:item id="i_view__extindex_id" messageCode="global_generic" url="/ext/index" z="HtGRdH2slWR36h2JP5jov3LlssA="/>
+        </menu:category>
     </menu:menu>
 </div>
