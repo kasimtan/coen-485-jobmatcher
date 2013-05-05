@@ -5,13 +5,18 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
     <!-- HTTP security configurations -->
+    
+   
     <http auto-config="true" use-expressions="true">
-        <form-login login-processing-url="/resources/j_spring_security_check" login-page="/login" authentication-failure-url="/login?login_error=t" />
+        <form-login login-processing-url="/resources/j_spring_security_check" login-page="/index.html" authentication-failure-url="/index.html#error"
+        authentication-success-handler-ref="customAuthenticationSuccessHandler"
+        
+         />
         <logout logout-url="/resources/j_spring_security_logout" />
         <!-- Configure these elements to secure URIs in your application -->
       
-      <!--  
-        <intercept-url pattern="/addresseses/**" access="isAuthenticated()" />
+     <!-- 
+        <intercept-url pattern="/addresseses/**" access="isAuthenticated()"  />
         <intercept-url pattern="/coverletters/**" access="isAuthenticated()" />
         <intercept-url pattern="/jobapplicants/**" access="isAuthenticated()" />
         <intercept-url pattern="/jobs/**" access="isAuthenticated()" />
@@ -19,10 +24,29 @@
         <intercept-url pattern="/savedjobapplicants/**" access="isAuthenticated()" />
         <intercept-url pattern="/savedjobs/**" access="isAuthenticated()" />
         <intercept-url pattern="/hiringmanagers/**" access="permitAll" />
-        <intercept-url pattern="/jobseekers/**" access="permitAll" />
+        <intercept-url pattern="/jobseekers/**" access="permitAll"  />
         <intercept-url pattern="/**" access="permitAll" />
         
         !-->
+        
+        
+         <intercept-url pattern="/hiringmanagers/**" access="isAuthenticated()" method="DELETE" />
+        <intercept-url pattern="/jobseekers/**" access="isAuthenticated()"  method="DELETE"/>
+        <intercept-url pattern="/addresseses/**" access="isAuthenticated()"/>
+        <intercept-url pattern="/coverletters/**" access="isAuthenticated()" />
+        <intercept-url pattern="/jobapplicants/**" access="isAuthenticated()"/>
+        <intercept-url pattern="/jobs/**" access="isAuthenticated()" />
+        <intercept-url pattern="/resumes/**" access="isAuthenticated()" />
+        <intercept-url pattern="/savedjobapplicants/**" access="isAuthenticated()" />
+        <intercept-url pattern="/savedjobs/**" access="isAuthenticated()" />
+        <intercept-url pattern="/hiringmanagers/**" access="permitAll" />
+        <intercept-url pattern="/jobseekers/**" access="permitAll"  />
+        <intercept-url pattern="/**" access="permitAll" />
+        
+        
+        
+        
+      
     </http>
     <!-- Configure Authentication mechanism -->
     <beans:bean id="customUserDetailsService" class="com.jobmatcher.security.CustomUserDetailsService"/>
