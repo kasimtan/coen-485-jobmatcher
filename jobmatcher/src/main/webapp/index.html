@@ -40,14 +40,15 @@
 			  <div class="pull-right">
 
 
-                  <span ng-show="hasError" class="text-error" style="font-weight: bold; line-height: 42px;padding-right: 10px;">Invalid Email or Password</span>
+
 			  		<form class="navbar-form pull-right" action="/jobmatcher/resources/j_spring_security_check" method="post">
 
                   <input class="span2" type="text" name='j_username' placeholder="Email">
                   <input class="span2" type="password" name='j_password' placeholder="Password">
                   <button type="submit" class="btn">Sign in</button>
               </form>
-			  </div>
+                  <div ng-show="hasError" class="text-error" style="font-weight: bold; text-align: center">Invalid Email or Password</span>
+                  </div>
               
           </div><!--/.nav-collapse -->
         </div>
