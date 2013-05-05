@@ -10,7 +10,6 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -26,19 +25,26 @@ public class CustomUserDetailsService implements UserDetailsService {
             throws UsernameNotFoundException {
         String email = "";
         String password = "";
+        UserDetail userDetail = null;
         JobSeeker user = getJobSeekerDetail(username);
         if(user == null) {
             HiringManager managerUser = getHiringManagerDetail(username);
             if(managerUser != null) {
                 email = managerUser.getEmail();
                 password = managerUser.getPassword();
+                userDetail = new UserDetail(email, password, true, true, true, true, getAuthorities());
+                userDetail.setHiringManager(managerUser);
             }
         }
         else {
             email = user.getEmail();
             password = user.getPassword();
+            userDetail = new UserDetail(email, password, true, true, true, true, getAuthorities());
+            userDetail.setJobSeeker(user);
         }
-        User userDetail = new User(email, password, true, true, true, true, getAuthorities());
+        
+        
+        
         return userDetail;
     }
 

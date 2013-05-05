@@ -1,7 +1,7 @@
-var MainCtrl = function ($scope,EventBroadcast,$timeout) {
+var MainCtrl = function ($scope,EventBroadcast,$timeout,$route,$location,$routeParams) {
      $scope.globalAlert = { show: false, type: 'success', msg: 'ALERT'} ;
 
-
+     $scope.hasError = $location.$$path == "/error";
     $scope.closeGlobalAlert = function () {
             $scope.globalAlert.show = false;
     }

@@ -115,10 +115,15 @@ public class HiringManager {
     }
 
     protected String encryptPassword(String password) {
-        if (password != null && (! password.matches("^[0-9a-fA-F]+$"))) {
-            // prevent encryption if already encrypted
-            password = DigestUtils.md5DigestAsHex(password.getBytes());
-        }
+	    if(password.length() == 32) {
+	    	//prevent encryption if already encrypted
+	    	return password;
+	    } else {
+	    	password = DigestUtils.md5DigestAsHex(password.getBytes());
+	    }
+           
+            
+       
         return password;
     }
 }

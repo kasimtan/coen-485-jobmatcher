@@ -3,13 +3,8 @@ var app = angular.module('app', ['app.services','ui.bootstrap']).
     config(['$routeProvider', function($routeProvider) {
 
     $routeProvider.
-        otherwise({ redirectTo: '/cafe.html'}).
-        when('/cafe.html', {templateUrl: 'partials/cafe.html'}).
-        when('/myprofile.html', {templateUrl: 'partials/myprofile.html'}).
-        when('/visual.html', {templateUrl: 'partials/visual.html'}).
-        when('/cafedetail.html', {templateUrl: 'partials/cafedetail.html'}).
-        when('/review.html', {templateUrl: 'partials/review.html'}).
-        when('/cafedetail/:cafeid', {templateUrl:'partials/cafedetail.html'});
+
+        when('/:param1', {templateUrl: '/index.html', controller: 'MainCtrl'})
 
 }]);
 app.run(function($rootScope) {
