@@ -35,7 +35,7 @@
         <intercept-url pattern="/addresseses/**" access="isAuthenticated()"/>
         <intercept-url pattern="/coverletters/**" access="isAuthenticated()" />
         <intercept-url pattern="/jobapplicants/**" access="isAuthenticated()"/>
-        <intercept-url pattern="/jobs/**" access="isAuthenticated()" />
+        <intercept-url pattern="/jobs/**" access="permitAll" />
         <intercept-url pattern="/resumes/**" access="isAuthenticated()" />
         <intercept-url pattern="/savedjobapplicants/**" access="isAuthenticated()" />
         <intercept-url pattern="/savedjobs/**" access="isAuthenticated()" />

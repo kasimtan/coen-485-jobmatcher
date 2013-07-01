@@ -27,5 +27,7 @@ public interface JobService {
 
 
 	public abstract Job updateJob(Job job);
+	
+	public abstract List<Job> findJobsByKeyword(String searchKeyWord);
 
 }

@@ -51,13 +51,22 @@ public class JobController {
         }
         return new ResponseEntity<String>(job.toJson(), headers, HttpStatus.OK);
     }
-
+	
 	@RequestMapping(headers = "Accept=application/json")
     @ResponseBody
     public ResponseEntity<String> listJson() {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
         List<Job> result = jobService.findAllJobs();
+        return new ResponseEntity<String>(Job.toJsonArray(result), headers, HttpStatus.OK);
+    }
+
+	@RequestMapping(value = "/search" ,headers = "Accept=application/json")
+    @ResponseBody
+    public ResponseEntity<String> listJob(@RequestParam String keyword) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        List<Job> result = jobService.findJobsByKeyword(keyword);
         return new ResponseEntity<String>(Job.toJsonArray(result), headers, HttpStatus.OK);
     }
 

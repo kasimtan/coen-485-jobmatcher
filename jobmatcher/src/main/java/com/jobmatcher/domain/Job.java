@@ -54,6 +54,10 @@ public class Job {
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Addresses> address = new HashSet<Addresses>();
 
+    
+    @Size(max = 255)
+    private String companyName;
+    
     @Size(max = 255)
     private String companyDescription;
 
@@ -181,6 +185,18 @@ public class Job {
 	public void setHiringManager(HiringManager hiringManager) {
         this.hiringManager = hiringManager;
     }
+	
+	
+
+	
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
 
 	public String toString() {
         return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
