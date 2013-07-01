@@ -2,19 +2,18 @@ package com.jobmatcher.service;
 
 /* Import SOLRJ, JAVA and JUNIT PACKAGES */
 
-import java.io.IOException;
-import java.io.StringWriter;
-import java.io.File;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
-import java.util.UUID;
-
+import java.util.Set;
+import com.jobmatcher.domain.Addresses;
 import com.jobmatcher.domain.Job;
 import com.jobmatcher.reference.ExperienceLevel;
 import com.jobmatcher.reference.JobType;
-import com.jobmatcher.repository.JobRepository;
+import com.jobmatcher.reference.States;
 import java.math.BigInteger;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -78,11 +77,36 @@ public class JobServiceImpl implements JobService {
 			job.setExperienceLevel(experienceLevel);
 		}
 	
-		
-
+			Addresses addressObj= new Addresses();
+			Set<Addresses> addressSet = new HashSet<Addresses>();
+			addressSet.add(addressObj);
+			job.setAddress(addressSet);
+			
+	
+			Object addressStr = solrDocument.get("job.address_t");
+			if(addressStr != null) {
+				addressObj.setAddress(addressStr.toString());
+			}
+			Object statesStr = solrDocument.get("job.states_t");
+			if(addressStr != null) {
+				States states = Enum.valueOf(States.class,statesStr.toString());
+				addressObj.setStates(states);
+			}
+			
+			Object cityStr = solrDocument.get("job.city_t");
+			if(cityStr != null) {
+				addressObj.setCity(cityStr.toString());
+			}
+			
+			
+			Object zipcodeStr = solrDocument.get("job.zip_t");
+			if(zipcodeStr != null) {
+				addressObj.setZip(zipcodeStr.toString());
+			}
+			
 //		 job.setAddress(response.getResults().get(i).getField("job.address_t"));
 		
-		Object jobDescription = response.getResults().get(i).get("job.description_t");
+		Object jobDescription = response.getResults().get(i).get("job.jobdescription_t");
 		if(jobDescription != null) {
 			job.setJobDescription(jobDescription.toString());
 		}
@@ -90,6 +114,20 @@ public class JobServiceImpl implements JobService {
 		if(jobDesicried != null) {
 			job.setDesiredSkills(jobDesicried.toString());
 		}
+		
+		
+		Object jobPostedDate = response.getResults().get(i).get("job.jobposteddate_t");
+		
+		if(jobPostedDate != null) {
+			job.setJobPostedDate(new Date(Long.valueOf(jobPostedDate.toString())));
+		}
+		
+		Object companyName = response.getResults().get(i).get("job.companyname_t");
+		
+		if(companyName != null) {
+			job.setCompanyName(companyName.toString());
+		}
+		
 		
 		
 		Object jobExpirationDate = response.getResults().get(i).get("job.expiration_t");
@@ -161,11 +199,31 @@ public class JobServiceImpl implements JobService {
 		indexJob(job);
 		return job;
 	}
+	
+	 public List<Job> findJobsByKeyword(String searchKeyWord) {
 
-	public QueryResponse search(String queryString) {
-		return search(new SolrQuery("job.solrsummary_t:"
-				+ queryString.toLowerCase()));
-	}
+         SolrQuery query = new SolrQuery("job.solrsummary_t:*" + searchKeyWord.toLowerCase());
+//         query.addFilterQuery(searchKeyWord);
+         int numJobs = 0, i = 0;
+
+         QueryResponse response = search( query );
+         
+         numJobs = response.getResults().size();
+         List<Job> jobs = new ArrayList<Job>();
+         for (i=0; i < numJobs; i++) {
+            Job job = convertQueryToJob(response,i);
+            jobs.add(job);
+         }
+         return jobs;
+
+     }
+
+//	public QueryResponse search(String queryString) {
+//		
+//		
+//		return search(new SolrQuery("job.solrsummary_t:*"
+//				);
+//	}
 
 	public QueryResponse search(SolrQuery query) {
 		try {
@@ -209,13 +267,42 @@ public class JobServiceImpl implements JobService {
             	 jid.addField("job.industry_t", job.getIndustry());
             }
             
-            if(job.getAddress() != null) {
-            	jid.addField("job.address_t", job.getAddress());
-            }
            
             
+            if(job.getAddress() != null) {
+            	Set<Addresses> addresses = (Set<Addresses>)job.getAddress();
+            	Addresses[] addressArray = addresses.toArray(new Addresses[addresses.size()]);
+            	if(addressArray.length == 0) {
+            		return;
+            	}
+            	String address = addressArray[0].getAddress();
+            	if(address != null) {
+            		jid.addField("job.address_t", address);
+            	}
+            	String city = addressArray[0].getCity();
+            	if(city != null) {
+            		jid.addField("job.city_t",city);
+            	}
+            	String states = addressArray[0].getStates().toString();
+            	if(states != null) {
+            		jid.addField("job.states_t",states);
+            	}
+            	
+            	String zipCode = addressArray[0].getZip();
+            	if(zipCode != null) {
+            		jid.addField("job.zip_t", zipCode);
+            	}
+            	
+            	
+            	
+            }
+           
+           if(job.getCompanyName() != null) {
+        	   jid.addField("job.companyname_t", job.getCompanyName());
+           }
+            
             if(job.getCompanyDescription() != null) {
-            	jid.addField("job.description_t", job.getCompanyDescription());
+            	jid.addField("job.companydescription_t", job.getCompanyDescription());
             }
             
             if(job.getJobDescription() != null) {
@@ -223,9 +310,9 @@ public class JobServiceImpl implements JobService {
             }
             
             if(job.getJobPostedDate() != null) {
-            	jid.addField("job.jobposteddate_t", job.getJobPostedDate());
+            	jid.addField("job.jobposteddate_t", job.getJobPostedDate().getTime());
             } else {
-            	jid.addField("job.jobposteddate_t", new Date());
+            	jid.addField("job.jobposteddate_t", new Date().getTime());
             }
             
             if(job.getDesiredSkills() != null) {
@@ -283,12 +370,12 @@ public class JobServiceImpl implements JobService {
                
            }
            if(job.getJobPostedDate() != null) {
-        	   str.append(" \nJob Posted Date: ").append(job.getJobPostedDate().toString());
+        	   str.append(" \nJob Posted Date: ").append(job.getJobPostedDate().getTime());
            }
            
            str.append("\n\n ");
           
-                          
+            jid.addField("job.solrsummary_t", str);      
             documents.add(jid);
         }
         try {
