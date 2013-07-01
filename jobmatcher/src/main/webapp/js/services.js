@@ -40,7 +40,29 @@ angular.module('app.services', ['ngResource']).
             }
 
         );
+    }).factory('Job', function($resource) {
 
-    }).config(function($httpProvider) {
+
+
+        return $resource('/jobmatcher/jobs/:id', {id : '@id'},
+            {
+
+            }
+
+        );
+    }).factory('JobSearch', function($resource) {
+
+
+
+        return $resource('/jobmatcher/jobs/search?keyword=:keyword', {keyword : '@keyword'},
+            {
+
+            }
+
+        );
+    })
+
+
+    config(function($httpProvider) {
         $httpProvider.defaults.headers.post  = {'content-type': 'application/json'};
     })

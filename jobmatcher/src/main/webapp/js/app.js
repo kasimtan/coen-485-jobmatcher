@@ -1,5 +1,5 @@
 //add service module
-var app = angular.module('app', ['app.services','ui.bootstrap']).
+var app = angular.module('app', ['app.services','ui.bootstrap','ngGrid','ui.bootstrap.alert']).
     config(['$routeProvider', function($routeProvider) {
 
     $routeProvider.

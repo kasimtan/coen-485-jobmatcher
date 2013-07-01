@@ -220,3 +220,194 @@ var HiringManagerRegistrationCtrl = function ($scope,HiringManager,EventBroadcas
 };
 
 
+
+
+var PostNewJobCtrl = function ($scope,Job,EventBroadcast) {
+    $scope.alertError = {type : 'error', msg: '', show: false };
+    $scope.newJob = {
+        jobTitle: "Software Engineer",
+        jobDescription:  "Blah Blah",
+        desiredSkills: "Java",
+        experienceLevel: "Entry_Level",
+        companyName: "Company",
+        address: [{address: "Address", city: "City", states: "California", zip: "94560" }]
+
+
+
+
+    };
+
+
+
+
+
+    $scope.open = function () {
+        $scope.dialogOpen = true;
+        $scope.newJob = {address: [{}]};
+        $scope.alertError = {type : 'error', msg: '', show: false };
+
+
+    };
+
+    $scope.close = function () {
+        $scope.dialogOpen = false;
+
+    };
+
+
+    $scope.submit = function() {
+        try {
+            $scope.validate();
+            Job.save($scope.newJob,function(arg){
+                $scope.close();
+                EventBroadcast.broadcast('showGlobalAlert',{type: 'success', msg: 'Success: Job created'});
+            });
+            EventBroadcast.broadcast('jobsRefresh',{});
+        } catch(error) {
+            $scope.alertError.msg = "Error: " + error;
+            $scope.alertError.show = true;
+
+        }
+
+
+
+
+    }
+
+
+
+    $scope.validate = function() {
+        if($scope.newJob.jobTitle == null || $scope.newJob.jobTitle.length == 0 ) {
+            throw "Job Title required";
+        }
+
+        if($scope.newJob.jobDescription == null || $scope.newJob.jobDescription.length == 0 ) {
+            throw "Job Description is required";
+        }
+
+
+        if($scope.newJob.desiredSkills == null ||  $scope.newJob.desiredSkills.length == 0) {
+            throw "Skills is required";
+        }
+
+        if($scope.newJob.experienceLevel != $scope.newJob.experienceLevel) {
+            throw "Experience Level is required";
+        }
+
+
+
+        if($scope.newJob.companyName == null || $scope.newJob.companyName.length == 0 ) {
+            throw "Company Name is required";
+        }
+
+        if($scope.newJob.address[0].states == null || $scope.newJob.address[0].states.length == 0 ) {
+            throw "State field is required";
+        }
+
+        if($scope.newJob.address[0].zip == null || $scope.newJob.address[0].zip.length == 0 ) {
+            throw "Zip field is required";
+        }
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+    $scope.hideError = function () {
+        $scope.alertError.show = false;
+    };
+
+    $scope.opts = {
+        backdropFade: true,
+        dialogFade:true
+    };
+    
+    
+    
+
+
+
+};
+
+var JobCtrl = function ($scope,Job,EventBroadcast,$timeout) {
+    $scope.alertError = {type : 'error', msg: '', show: false };
+    $scope.myData = Job.query();
+
+    $scope.gridOptions = { data: 'myData',
+        columnDefs: [
+            {field: 'jobTitle', displayName: 'Job Title'},
+            {field: 'jobDescription', displayName: 'Description'},
+            {field: 'desiredSkills', displayName: 'Skills'},
+
+            {field: 'jobPostedDate', displayName: 'Posted Date',
+            cellTemplate: "<div class=\"ngCellText colt{{$index}}\">{{row.getProperty(col.field) | date:'longDate'}}</div>"
+
+            },
+            {field: 'companyName', displayName: 'Company Name'},
+            {field: 'address[0].city', displayName: 'Location'}
+        ]
+
+
+    };
+
+    $scope.$on('jobsRefresh', function(event,alert) {
+       $timeout(function() {
+           $scope.myData = Job.query();
+
+       },2000)  ;
+
+
+
+    });
+
+
+
+
+
+
+
+};
+
+
+var JobSearchCtrl = function ($scope,JobSearch,EventBroadcast,$timeout) {
+    $scope.alertError = {type : 'error', msg: '', show: false };
+
+    $scope.gridOptions = { data: 'myData',
+        columnDefs: [
+            {field: 'jobTitle', displayName: 'Job Title'},
+
+            {field: 'jobDescription', displayName: 'Description'},
+            {field: 'desiredSkills', displayName: 'Skills'},
+            {field: 'jobPostedDate', displayName: 'Posted Date',
+                cellTemplate: "<div class=\"ngCellText colt{{$index}}\">{{row.getProperty(col.field) | date:'longDate'}}</div>"
+
+            },
+            {field: 'companyName', displayName: 'Company Name'},
+            {field: 'address[0].city', displayName: 'Location'}
+        ]
+
+
+    };
+
+    $scope.search = function() {
+        $scope.myData = JobSearch.query({keyword: $scope.keyword});
+    }
+
+
+
+
+
+
+
+
+
+};
+
